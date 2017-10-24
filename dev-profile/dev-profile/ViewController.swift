@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        profileLogo.layer.cornerRadius = 10
+        profileLogo.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var profileLogo: UIImageView!
 }
 
