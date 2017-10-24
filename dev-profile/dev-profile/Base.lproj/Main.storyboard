@@ -109,6 +109,12 @@
                             <constraint firstItem="Daj-7Y-TNy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wdM-E2-gi4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Wxg-0g-0rk"/>
+                                <include reference="fXD-CC-Rdg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="profileLogo" destination="36j-x3-3rp" id="Doi-Q3-qOH"/>
