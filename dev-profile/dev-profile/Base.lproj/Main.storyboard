@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,20 +47,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Hv-9Q-KSX" firstAttribute="top" secondItem="pFS-E5-0u6" secondAttribute="top" constant="60" id="TBe-2D-qd4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TBe-2D-qd4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="TBe-2D-qd4"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="uBR-oa-7IG" userLabel="Button Stack View">
-                                <rect key="frame" x="67.5" y="286" width="240" height="57"/>
+                                <rect key="frame" x="36" y="286" width="303" height="57"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-vI-CCe">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="57"/>
                                         <state key="normal" image="cameraButton"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyW-Mh-Eox">
-                                        <rect key="frame" x="91" y="0.0" width="58" height="57"/>
+                                        <rect key="frame" x="106" y="0.0" width="73" height="57"/>
                                         <state key="normal" image="favoriteButton"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFR-Zj-8HN">
-                                        <rect key="frame" x="183" y="0.0" width="57" height="57"/>
+                                        <rect key="frame" x="213" y="0.0" width="90" height="57"/>
                                         <state key="normal" image="inboxButton"/>
                                     </button>
                                 </subviews>
@@ -108,19 +122,32 @@
                             <constraint firstItem="Mgf-qg-3rV" firstAttribute="leading" secondItem="w3O-S3-HEi" secondAttribute="leading" constant="67.5" id="2cO-7e-KmF"/>
                             <constraint firstItem="Daj-7Y-TNy" firstAttribute="top" secondItem="w3O-S3-HEi" secondAttribute="top" id="4U1-a4-cTl"/>
                             <constraint firstItem="uBR-oa-7IG" firstAttribute="top" secondItem="pFS-E5-0u6" secondAttribute="bottom" constant="41" id="Cdr-mB-7we"/>
+                            <constraint firstItem="Mgf-qg-3rV" firstAttribute="top" secondItem="pFS-E5-0u6" secondAttribute="bottom" constant="28.5" id="E6u-sA-TYp"/>
                             <constraint firstItem="Daj-7Y-TNy" firstAttribute="leading" secondItem="w3O-S3-HEi" secondAttribute="leading" id="Lpz-13-6Xz"/>
                             <constraint firstItem="pFS-E5-0u6" firstAttribute="top" secondItem="w3O-S3-HEi" secondAttribute="top" constant="115" id="NXF-68-GS0"/>
+                            <constraint firstItem="uBR-oa-7IG" firstAttribute="centerY" secondItem="pFS-E5-0u6" secondAttribute="centerY" constant="3" id="PvG-3R-fau"/>
                             <constraint firstItem="pFS-E5-0u6" firstAttribute="leading" secondItem="w3O-S3-HEi" secondAttribute="leading" constant="32" id="TTK-o8-e5p"/>
                             <constraint firstItem="uBR-oa-7IG" firstAttribute="centerX" secondItem="w3O-S3-HEi" secondAttribute="centerX" id="Wxg-0g-0rk"/>
                             <constraint firstItem="Mgf-qg-3rV" firstAttribute="centerX" secondItem="w3O-S3-HEi" secondAttribute="centerX" id="d9r-h6-9gH"/>
                             <constraint firstItem="Mgf-qg-3rV" firstAttribute="top" secondItem="uBR-oa-7IG" secondAttribute="bottom" constant="40" id="jAs-3F-RRX"/>
                             <constraint firstItem="Daj-7Y-TNy" firstAttribute="trailing" secondItem="w3O-S3-HEi" secondAttribute="trailing" id="wdM-E2-gi4"/>
                             <constraint firstItem="w3O-S3-HEi" firstAttribute="trailing" secondItem="Mgf-qg-3rV" secondAttribute="trailing" constant="67.5" id="zGR-fE-KOn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uBR-oa-7IG" secondAttribute="trailing" constant="20" id="zhg-L9-NhO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w3O-S3-HEi"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E6u-sA-TYp"/>
+                                <exclude reference="PvG-3R-fau"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <include reference="Wxg-0g-0rk"/>
+                                <include reference="E6u-sA-TYp"/>
+                                <exclude reference="jAs-3F-RRX"/>
+                                <exclude reference="Cdr-mB-7we"/>
+                                <include reference="PvG-3R-fau"/>
+                                <exclude reference="Wxg-0g-0rk"/>
                             </mask>
                         </variation>
                     </view>
